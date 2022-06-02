@@ -12,15 +12,17 @@ This project is the frontend of the system which is used to interect with Blockc
 ### Available Scripts
 
 In the project directory, you can run:
-<br/>
+
+#### Install all the dependencies
 ```
 npm install
 ```
-<br/>
+#### Start the server in localhost
 ```
 npm start
 ```
-<br/>
+#### Console
+
 ```
 Compiled successfully!
 
@@ -34,7 +36,6 @@ To create a production build, use npm run build.
 
 webpack compiled successfully
 
-```
 ```
 <br/>
 
