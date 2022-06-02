@@ -9,9 +9,9 @@ const index = () => {
   return (
       <Routes>
           <Route path='/home' element={<Home/>}/>
-          <Route path='/home' element={<IPFS/>}/>
-          <Route path='/home' element={<EvidentlyAI/>}/>
-          <Route path='/home' element={<BlockExplorer/>}/>
+          <Route path='/ipfs' element={<IPFS/>}/>
+          <Route path='/evident' element={<EvidentlyAI/>}/>
+          <Route path='/explorer' element={<BlockExplorer/>}/>
       </Routes>
 
   )
