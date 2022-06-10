@@ -14,21 +14,29 @@ const Menubar = () => {
         <img alt="logo" src={logo} />
       </Menu.Item>
 
+          <Link to='/home'>
       <Menu.Item name="home" onClick={handleItemClick}>
-          <Link to='/home'>Home</Link>
+            Home
       </Menu.Item>
+            </Link>
 
+      <Link to='/ipfs'>
       <Menu.Item name="ipfs" onClick={handleItemClick}>
-      <Link to='/ipfs'>IPFS</Link>
+        IPFS
       </Menu.Item>
+        </Link>
 
+      <Link to='/evident'>
       <Menu.Item name="evident" onClick={handleItemClick}>
-      <Link to='/evident'>Evidently-AI</Link> 
+        Evidently-AI
       </Menu.Item>
-      <Menu.Item name="explorer" path='/ex' onClick={handleItemClick}>
+        </Link> 
+
       <Link to='/explorer'>
-          Block-Explorer</Link> 
+      <Menu.Item name="explorer" path='/ex' onClick={handleItemClick}>
+          Block-Explorer
       </Menu.Item>
+          </Link> 
     </Menu>
   );
 };
