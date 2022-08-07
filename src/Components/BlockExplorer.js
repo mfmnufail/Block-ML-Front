@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Button, Form, Input, Table , Divider, Message, Dropdown, Container} from "semantic-ui-react";
+import { Table , Divider,Container} from "semantic-ui-react";
 import axios from "axios";
 
 const TrainDataset = () => {
-  const [datasetAddress, setDatasetAddress] = useState("");
-  const [description, setDescription] = useState("");
-  const [flag, setFlag] = useState("");
-  const [error, setError] = useState();
-  const [note, setNote] = useState();
+
   const [blockchain, setBlockchain] = useState([]);
 
 
   useEffect(() => {
-    axios.get("http://localhost:3221/blockchain").then((response) => {
+    axios.get("http://localhost:3704/blockchain").then((response) => {
       setBlockchain(response.data.chain);
       console.log("Blockchain explorer " + JSON.stringify(response.data.chain));
 

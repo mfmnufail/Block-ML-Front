@@ -13,7 +13,7 @@ const TestDataset = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3221/test/pool").then((response) => {
+    axios.get("http://localhost:3704/test/pool").then((response) => {
       setTestPool(Object.values(response.data));
       console.log(response.data);
 
@@ -37,7 +37,7 @@ const TestDataset = () => {
 
     console.log("The data :" + JSON.stringify(data))
 
-    axios.post("http://localhost:3221/data/test", data)
+    axios.post("http://localhost:3704/data/test", data)
     .catch(err => {
       setError(err.response.data.errors);
     });
@@ -95,6 +95,7 @@ const TestDataset = () => {
           <Table.Row>
             <Table.HeaderCell>No</Table.HeaderCell>
             <Table.HeaderCell>Sender wallet key</Table.HeaderCell>
+            <Table.HeaderCell>Ruputation</Table.HeaderCell>
             <Table.HeaderCell>Training Dataset Address</Table.HeaderCell>
             <Table.HeaderCell>Testing Dataset Address</Table.HeaderCell>
             <Table.HeaderCell>Description</Table.HeaderCell>
@@ -111,6 +112,7 @@ const TestDataset = () => {
           <Table.Row>
             <Table.Cell>{index+1}</Table.Cell>
             <Table.Cell >{row.senderWallet.publicKey}</Table.Cell>
+            <Table.Cell >{row.senderWallet.reputation}</Table.Cell>
             <Table.Cell>{row.trainDatasetAddress}</Table.Cell>
             <Table.Cell>{row.testDatasetAddress}</Table.Cell>
             <Table.Cell>{row.description}</Table.Cell>

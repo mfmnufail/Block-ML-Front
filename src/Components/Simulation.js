@@ -5,13 +5,14 @@ import { ResponsiveLine } from '@nivo/line'
 import Consensus from './Graphs/Consensus';
 import Difficulty from './Graphs/Difficulty';
 import SmartContractCost from './Graphs/SmartContractCost';
+import MultipleBlockchain from './Graphs/MultipleBlockchain';
 
 const Simulation = () => {
 
 const [blockchain, setBlockchain] = useState([]);
    
 useEffect(() => {
-    axios.get("http://localhost:3221/blockchain").then((response) => {
+    axios.get("http://localhost:3704/blockchain").then((response) => {
       setBlockchain(response.data.chain);
    })
   }, []);
@@ -51,6 +52,8 @@ useEffect(() => {
         <Difficulty/>
         <Divider horizontal> Smart Contract Number of Bidding vs Cost </Divider>
         <SmartContractCost/>
+        <Divider horizontal> Block creation time for different consensus </Divider>
+        <MultipleBlockchain/>
     </div>
   )
 }
