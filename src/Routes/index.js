@@ -7,6 +7,7 @@ import Home from '../Components/Home'
 import IPFS from '../Components/IPFS';
 import Model from '../Components/Model';
 import Simulation from '../Components/Simulation';
+import SmartContract from '../Components/SmartContract';
 import TestDataset from '../Components/TestDataset';
 import TrainDataset from '../Components/TrainDataset';
 import Wallet from '../Components/Wallet';
@@ -24,6 +25,7 @@ const index = () => {
           <Route path='/favModel' element={<FavouriteModel/>}/>
           <Route path='/wallet' element={<Wallet/>}/>
           <Route path='/analysis' element={<Simulation/>}/>
+          <Route path='/smartcontract' element={<SmartContract/>}/>
       </Routes>
 
   )

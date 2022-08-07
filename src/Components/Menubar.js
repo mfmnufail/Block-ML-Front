@@ -69,10 +69,15 @@ const Menubar = () => {
           </Link> 
 
       <Link to='/analysis'>
-      <Menu.Item name="analysis" path='/analysis' onClick={handleItemClick}>
-          Analysis 
-      </Menu.Item>
-          </Link> 
+        <Menu.Item name="analysis" path='/analysis' onClick={handleItemClick}>
+            Analysis 
+        </Menu.Item>
+      </Link> 
+      <Link to='/smartcontract'>
+        <Menu.Item name="analysis" path='/analysis' onClick={handleItemClick}>
+            Smart Contracts 
+        </Menu.Item>
+      </Link> 
     </Menu>
   );
 };
