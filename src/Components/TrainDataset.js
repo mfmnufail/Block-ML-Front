@@ -16,7 +16,6 @@ const TrainDataset = () => {
       setTrainPool(Object.values(response.data));
       console.log(response.data);
 
-    //   console.log(Object.values(trainPool))
     });
   }, []);
 
@@ -43,13 +42,6 @@ const TrainDataset = () => {
 
   }
 
-//   const deleteHandler=(id)=>{
-//     axios.delete(`https://localhost:5001/student/${id}`)
-//     .then((response) => {
-//       console.log(response.data);
-
-//     });
-//   }
 
 
 
