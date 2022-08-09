@@ -7,7 +7,7 @@ import { Container } from "semantic-ui-react";
 function App() {
   return (
     <BrowserRouter>
-      <Container style={{"marginTop":"10px","width":"85%"}}>
+      <Container style={{"marginTop":"10px","width":"96%"}}>
         <Menubar />
         <AppRouter />
       </Container>

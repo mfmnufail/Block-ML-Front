@@ -12,7 +12,7 @@ const Simulation = () => {
 const [blockchain, setBlockchain] = useState([]);
    
 useEffect(() => {
-    axios.get("http://localhost:3704/blockchain").then((response) => {
+    axios.get("http://localhost:3006/blockchain").then((response) => {
       setBlockchain(response.data.chain);
    })
   }, []);

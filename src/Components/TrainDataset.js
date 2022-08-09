@@ -12,7 +12,7 @@ const TrainDataset = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3704/train/pool").then((response) => {
+    axios.get("http://localhost:3006/train/pool").then((response) => {
       setTrainPool(Object.values(response.data));
       console.log(response.data);
 
@@ -35,7 +35,7 @@ const TrainDataset = () => {
 
     console.log("The data :" + JSON.stringify(data))
 
-    axios.post("http://localhost:3704/data/train", data)
+    axios.post("http://localhost:3006/data/train", data)
     .catch(err => {
       setError(err.response.data.errors);
     });

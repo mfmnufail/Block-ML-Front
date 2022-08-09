@@ -8,7 +8,7 @@ const TrainDataset = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3704/blockchain").then((response) => {
+    axios.get("http://localhost:3006/blockchain").then((response) => {
       setBlockchain(response.data.chain);
       console.log("Blockchain explorer " + JSON.stringify(response.data.chain));
 

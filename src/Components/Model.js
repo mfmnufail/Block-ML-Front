@@ -11,7 +11,7 @@ const Model = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3704/model/pool").then((response) => {
+    axios.get("http://localhost:3006/model/pool").then((response) => {
         setModelPool(Object.values(response.data));
       console.log(response.data);
 
@@ -34,7 +34,7 @@ const Model = () => {
 
     console.log("The data :" + JSON.stringify(data))
 
-    axios.post("http://localhost:3704/model", data)
+    axios.post("http://localhost:3006/model", data)
     .catch(err => {
       setError(err.response.data.errors);
     });
