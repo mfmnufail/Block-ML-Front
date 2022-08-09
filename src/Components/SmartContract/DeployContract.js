@@ -14,7 +14,7 @@ const DeployContract = () => {
     const[contractPool, setContractPool] = useState([])
 
     useEffect(() => {
-      axios.get("http://localhost:3006/blockchain").then((response) => {
+      axios.get("http://localhost:4000/blockchain").then((response) => {
         setContractPool(response.data.chain);
         // console.log(response.data);
   
@@ -51,7 +51,7 @@ const DeployContract = () => {
     
         console.log("The data :" + JSON.stringify(data))
     
-        axios.post("http://localhost:3006/contract", data)
+        axios.post("http://localhost:4000/contract", data)
         .then((response)=>{
             setContractAddress(response.data.contractAddress)
             setTransactionHash(response.data.transactionHash)

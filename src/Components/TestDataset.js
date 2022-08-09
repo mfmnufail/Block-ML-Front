@@ -13,7 +13,7 @@ const TestDataset = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3006/test/pool").then((response) => {
+    axios.get("http://localhost:4000/test/pool").then((response) => {
       setTestPool(Object.values(response.data));
       console.log(response.data);
 
@@ -37,7 +37,7 @@ const TestDataset = () => {
 
     console.log("The data :" + JSON.stringify(data))
 
-    axios.post("http://localhost:3006/data/test", data)
+    axios.post("http://localhost:4000/data/test", data)
     .catch(err => {
       setError(err.response.data.errors);
     });
