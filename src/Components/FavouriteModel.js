@@ -16,7 +16,7 @@ const FavouriteModel = () => {
   
 
   useEffect(() => {
-    axios.get("http://localhost:4000/favmodel/pool").then((response) => {
+    axios.get("http://localhost:3015/favmodel/pool").then((response) => {
         testsetFavModelPool(Object.values(response.data));
       console.log(Object.values(response.data));
       setFavModelPool(testfavModelPool)
@@ -46,7 +46,7 @@ const FavouriteModel = () => {
 
     if(performance != null){
 
-      axios.post("http://localhost:4000/favmodel", data)
+      axios.post("http://localhost:3015/favmodel", data)
     }
     
     console.log("The data :" + JSON.stringify(data))

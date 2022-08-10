@@ -7,7 +7,7 @@ const Wallet = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:4000/wallet").then((response) => {
+    axios.get("http://localhost:3015/wallet").then((response) => {
         setWallet(response.data);
       console.log(wallet)
 
